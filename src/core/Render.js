@@ -28,11 +28,29 @@ var Render = {};
 
         return render;
     };
+/*
+    let request
 
+    const performAnimation = () => {
+        request = requestAnimationFrame(performAnimation)
+        //animate something
+    }
+
+    requestAnimationFrame(performAnimation)
+
+//...
+
+    cancelAnimationFrame(request) //stop the animation
+*/
     Render.run = function(render) {
         (function loop(time){
             render.frameRequestId = _requestAnimationFrame(loop);
+            Render.execute(render);
         })();
+    };
+
+    Render.execute = function(render) {
+
     };
 
     var _createCanvas = function(width, height) {
