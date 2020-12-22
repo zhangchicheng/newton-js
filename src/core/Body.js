@@ -10,4 +10,8 @@ var Body = {};
             radius: radius
         };
     };
+
+    Body.polygon = function(x, y, side) {
+
+    }
 })();
